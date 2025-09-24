@@ -39,6 +39,8 @@ jobs:
         with:
           node-version: lts/*
           cache: 'pnpm'
+      - name: Set up Zig
+        uses: mlugg/setup-zig@v2
       - name: Install dependencies
         run: pnpm install
       - name: Build
