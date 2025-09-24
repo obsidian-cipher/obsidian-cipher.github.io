@@ -1,0 +1,12 @@
+{
+  "name": "cipher",
+  "version": "0.1.0",
+  "description": "WASI cipher program",
+  "private": true,
+  "scripts": {
+    "build": "zig build",
+    "dev": "zig build run -fwasmtime",
+    "test": "zig build test -fwasmtime --summary all"
+  },
+  "packageManager": "pnpm@10.17.0"
+}

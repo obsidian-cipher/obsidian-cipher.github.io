@@ -1,0 +1,13 @@
+{
+  "name": "obsidian-cipher",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "preview": "pnpm --filter web preview",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test"
+  },
+  "packageManager": "pnpm@10.17.0"
+}
