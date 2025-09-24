@@ -8,7 +8,7 @@ function command({ echo }: CommandOptions) {
     "Our Terms of Service are designed to protect both you and us.\r\n"
   );
   echo.stdout(
-    "For more details, visit: https://obsidian-cypher.systems/tos\r\n"
+    "For more details, visit: https://obsidian-cipher.systems/tos\r\n"
   );
 }
 

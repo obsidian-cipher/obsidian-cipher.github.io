@@ -8,7 +8,7 @@ function command({ echo }: CommandOptions) {
     "We value your privacy. We do not collect any personal data.\r\n"
   );
   echo.stdout(
-    "For more details, visit: https://obsidian-cypher.systems/privacy\r\n"
+    "For more details, visit: https://obsidian-cipher.systems/privacy\r\n"
   );
 }
 
