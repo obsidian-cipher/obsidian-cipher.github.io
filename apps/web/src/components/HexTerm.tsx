@@ -124,7 +124,7 @@ export default function HexTerm({
           } else if (cmd === "clear") {
             term.clear();
           } else if (cmd) {
-            run(cmd, localEcho, fs);
+            await run(cmd, localEcho, fs);
           }
         }
       };
@@ -185,7 +185,7 @@ function help() {
     .map(([, { help }]) => `${help}\r\n`);
 }
 
-function run(
+async function run(
   cmd: string,
   echo: LocalEchoAddon,
   fs?: readonly FileSystemEntry[]
@@ -193,7 +193,7 @@ function run(
   const [name, ...args] = cmd.split(/\s+/);
   const command = (commands as unknown as Commands)[name];
   if (command) {
-    command.command({ echo, args, fs });
+    await command.command({ echo, args, fs });
   } else {
     echo.stdout(`Unknown command: ${cmd}\r\n`);
   }
