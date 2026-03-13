@@ -15,106 +15,179 @@
 
         :root {
             font-family: "Terminess", monospace;
-            background-color: #000a00;
-            color: #00ff41;
+            background-color: #000800;
+            color: #ffffff;
             line-height: 1.6;
         }
 
         body {
             margin: 0;
-            padding: 2rem;
+            padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
-            background: radial-gradient(circle at center, #001a00 0%, #000500 100%);
-            overflow: hidden;
+            background: #000800;
+            overflow-y: auto;
         }
 
-        .scanlines {
+        /* Muted Scanlines - slightly increased visibility */
+        body::before {
+            content: "";
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background: linear-gradient(to bottom,
-                    rgba(18, 16, 16, 0) 50%,
+                    rgba(0, 0, 0, 0) 50%,
                     rgba(0, 0, 0, 0.25) 50%);
             background-size: 100% 4px;
             z-index: 10;
             pointer-events: none;
         }
 
+        /* Background Glow - slightly brightened */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #002200 0%, #000800 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
         .content-box {
-            max-width: 600px;
-            border: 1px solid #00ff41;
-            padding: 3rem;
-            background: rgba(0, 20, 0, 0.8);
-            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+            max-width: 800px;
+            width: 100%;
+            padding: 4rem 2rem;
             position: relative;
             z-index: 5;
         }
 
         h1 {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             margin-top: 0;
-            border-bottom: 1px solid #00ff41;
-            padding-bottom: 0.5rem;
+            color: #00ff41;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
         }
 
         .tagline {
             font-style: italic;
-            opacity: 0.8;
-            margin-bottom: 2rem;
+            color: #00ff41;
+            opacity: 0.7;
+            margin-bottom: 4rem;
+            display: block;
+            letter-spacing: 1px;
         }
 
-        .policy-text {
+        h2 {
             font-size: 1.1rem;
-            border-left: 2px solid #00ff41;
-            padding-left: 1.5rem;
+            color: #00ff41;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 5px rgba(0, 255, 65, 0.2);
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .p-text {
+            font-size: 1.05rem;
+            color: #ffffff;
+            opacity: 0.95;
+            max-width: 700px;
         }
 
         .back-link {
-            margin-top: 3rem;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
             display: inline-block;
             color: #00ff41;
             text-decoration: none;
             font-size: 0.9rem;
-            border: 1px solid #00ff41;
-            padding: 0.5rem 1rem;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            padding: 0.6rem 1.2rem;
             transition: all 0.3s ease;
+            background: rgba(0, 255, 65, 0.05);
         }
 
         .back-link:hover {
-            background: #00ff41;
-            color: #000;
+            background: rgba(0, 255, 65, 0.15);
+            border-color: #00ff41;
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
         }
 
-        .glitch-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            box-shadow: inset 0 0 100px rgba(0, 255, 65, 0.1);
-            pointer-events: none;
+        @media (max-width: 600px) {
+            .content-box {
+                padding: 2.3rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="scanlines"></div>
     <div class="content-box">
-        <div class="glitch-overlay"></div>
-        <h1>Directive 0x00: The Protocol</h1>
-        <p class="tagline">As in the Code, so in the Void.</p>
-        <div class="policy-text">
-            The laboratory is non-local; manifest your intent from any node on the
-            grid where focus is absolute. Silence is our primary cipher, and the
-            transmutation of code is our only ritual.
+        <h1>Directive 0x00: Protocol of Operation</h1>
+        <span class="tagline">As in the Code, so in the Void.</span>
+
+        <div class="section">
+            <h2>I. THE PRIMARY RITE</h2>
+            <div class="p-text">Work is the first act of transmutation. We do not build features; we manifest intent
+                into the void. If your code does not echo with the frequency of the absolute, it is merely noise.
+                Silence the noise.</div>
         </div>
+
+        <div class="section">
+            <h2>II. THE GRID (LOCATION)</h2>
+            <div class="p-text">The architecture of the Pleroma is non-local. An Initiate may operate from any node on
+                the planetary grid, provided the connection is encrypted and the focus is absolute. Presence is measured
+                by output, not by the physical shell.</div>
+        </div>
+
+        <div class="section">
+            <h2>III. THE RITUAL OF FOCUS (HOURS)</h2>
+            <div class="p-text">Time is a construct of the Demiurge. We do not observe the standard cycles of the sun.
+                The Protocol requires only that the work is performed when the mind is closest to the Source. However,
+                once a Sequence is initiated, it must be seen through to its final encryption.</div>
+        </div>
+
+        <div class="section">
+            <h2>IV. ENCRYPTION OF INTENT (CONFIDENTIALITY)</h2>
+            <div class="p-text">Silence is our strongest cipher. What is built within the Forge stays within the Forge.
+                To leak a sigil is to break the circle. Unauthorized disclosure is an immediate termination of the
+                sequence.</div>
+        </div>
+
+        <div class="section">
+            <h2>V. AS ABOVE, SO BELOW (QUALITY)</h2>
+            <div class="p-text">The beauty of the architecture must be reflected in the smallest line of code. We do not
+                tolerate "surface-level" solutions. We optimize for the deep-layer. If the foundation is flawed, the
+                entire reality will collapse.</div>
+        </div>
+
+        <div class="section">
+            <h2>VI. THE ASCENSION (GROWTH)</h2>
+            <div class="p-text">Stagnation is the only failure. Every Initiate is expected to constantly decode new
+                languages, systems, and dimensions. To stop learning is to descend back into the noise.</div>
+        </div>
+
         <a href="/" class="back-link">← Return to Terminal</a>
     </div>
 </body>
