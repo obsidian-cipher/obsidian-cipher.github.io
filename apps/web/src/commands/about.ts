@@ -8,6 +8,7 @@ function command({ echo }: CommandOptions) {
   echo.stdout("A crypto native software company established in 2025.\r\n");
   echo.stdout("Run the following commands to learn more:\r\n");
   echo.stdout("  contact - Contact us\r\n");
+  echo.stdout("  protocol - View our workplace protocol\r\n");
   echo.stdout("  privacy - View our Privacy Policy\r\n");
   echo.stdout("\r\n");
   echo.stdout("Type 'help' to see all available commands.\r\n");

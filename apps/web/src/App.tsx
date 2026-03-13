@@ -29,6 +29,7 @@ const WELCOME_MESSAGE = `
    ▀█▄▀▪·▀▀▀▀  ▀▀▀▀ ▀▀▀▀▀▀▀▀• ▀▀▀ ▀  ▀ ▀▀ █▪    ·▀▀▀ ▀▀▀.▀   ▀▀▀ · ▀▀▀ .▀  ▀\r
    \r
 Last login: Mon Jul 23 05:44:47 TD 1888 on ttys666\r
+As in the Code, so in the Void.\r
 HexOS v${__VERSION__} (c) 2025 Obsidian Cipher Systems LLC. All rights reserved.\r`;
 
 const HISTORY = ["about", "help", "echo As above so below, as below so above"];
@@ -39,6 +40,7 @@ const FILE_SYSTEM: FileSystemEntry[] = [
   { type: "file", name: "./file3.txt" },
   { type: "file", name: "./file4.txt" },
   { type: "file", name: "./file5.txt" },
+  { type: "file", name: "./protocol.txt" },
   { type: "directory", name: "./dir1" },
   { type: "directory", name: "./dir2" },
   { type: "directory", name: "./dir3" },
